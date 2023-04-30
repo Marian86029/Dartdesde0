@@ -3,6 +3,12 @@ String capitalizar(String texto){
   return texto;
   
 }
+Map<String, String> capitalizarMapa(Map<String,String> mapa){
+  // romper la referencia
+  mapa = {...mapa};
+  mapa["nombre"] = mapa["nombre"]?.toUpperCase() ?? "No hay Nombre";
+  return mapa;
+}
 
 
 main(List<String> args){
@@ -11,5 +17,15 @@ main(List<String> args){
 
   //print(nombre);
   //print(nombre2);
+
+  Map<String, String> persona = {
+    "nombre": "Tony Stark"
+  };
+Map<String, String> persona2 = capitalizarMapa(persona);
+
+print(persona);
+print(persona2);
+
+  
 
 }
