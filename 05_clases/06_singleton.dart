@@ -12,7 +12,7 @@ void main(List<String> args) {
 
   print(spotifyService == spotifyService2);
 
-
+                                                              // En consola puedo observar una replica del mismo url ya que el patron toma el ultimo valor donde modifique el url
   print(spotifyService.url);
     print(spotifyService2.url);
 
